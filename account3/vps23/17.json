@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "western-shuttle-355013",
+  "private_key_id": "4792914d29282cef907cc13c0535191e507760bf",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCj9jH4kPJ3NllT\nCRAfc/iBSVgyR/OW//+RTN3KVV9hqf/8EcY3Pd6xVZGcjwBYEWIQ2P7ECod5v0d2\n37u2jxnTD4Te5AW83fLtFvjWKze35NOfgp+fRhkDjA8FWEaJNQo5n+ey60U44yBi\n6isFcQLuq8e902Gf9uAbe2FPCtZ96R7Zv6SAA4ZW6dbML3GKPVwU0esMM77rIubP\nr3u1xMSwWyyCpOqhmSjDEU6V8xxfq6WDEUZM7ZdHrLWxkBN9ZeCZzqIprgdRb3mL\n0r9RII6lQ4ZGcNJ+QZeSlJz7BAHmnS8HGXQ1fiUgL1aXvl3v5TQMQO5hf/0d10PP\nFmfWgqXHAgMBAAECggEAGLp4CpPwgFVJ6dxAj8CBtsdf42QhqLZJuQQoS9dOEDXq\nUyiVG14b7jqdwEh7AKKihoWhADfRpeWDkDn/HsdSBEM0wsRjhHrO+Wi7tTAFx8OI\nZ+gfTeTDFLC0z+q351gAsknb0TVq68D+8Jwo9Tmi+78cXBSmMSYz4kEx9GYJ4n7z\nmP7D4So4tHiOhdb2dLtniY8Y5U1G5+aO/P6fmHwHjvhpGO4xc2yukRL+oHbHO2Wo\nCR4PNlSFAd9pkq0EA0+q5erIMNg1jgZImtoo3tRvbM6eh0ROKXniYTEGroRbiHCI\nx7WNejS60D5sV0c7E5p4pban4mvNvEkfaAjjXZ0hfQKBgQDlbw1RXRbIYVJ9vijv\ntNGAZalMPJwU9iOOOP4G/cyE1nEpu4KKX80zgNw5MRvcj2nk+muIUXOVr1kRv5s4\n3tb90LViVnvUIi9eyx2qFpfgQhyEmgxT8eOvt26WNF73K2DCBeIL/um+McuLZ1/6\nme4HfdZWNK/kpRY9GROgvkYzZQKBgQC28mYfHR7cpnJrP3bvjdQkUUJPXYCz1VF+\nwDz8ToO8s8S9LhaCHA6U69VkClTVVYLOVwvkUBlO9g1jVvA0UMnoFY82YZNJ6hav\n4ame55yG5po2yv9qxUs4+iupuqOXGPDGWn1NU5zQk/mzZQI0fKrjQSczOBm0JDG0\nG4J52Qx/uwKBgQCqQmEFsikIBoDq40UJrYuS1t5tvsStIYN9NXn9wjYVlfVgXNAg\n07s5rzS+FF1yrdKNo/BMtvUpbXiRnTkZWPT+YfVYxokaAUxZ8i1PXXjTaPw0wwTG\n/shSS7N7L94RWlVxZmA7Oq5HADjmeI5XMAfd81otmue0q3X3XTadoNYDqQKBgQCq\nXN42WSLVLPbd4nK6L6P+0eDjEVp5nMtQMmpYNjE9N1adKN7y+HenvFmx2GEZbJDr\n32mGigSXYFAlUt9KiHUM946ugHztVt0bmhQfkuVTRkkTf0QMxH8BJw4j91bBrQsC\nW1/V82fTYAkmQoikIffsuk5rxvFArHfQldGR8EpQYwKBgGkBNrXX+uv2hl/CaTYA\nxIf1nGNTExVHmHmR88xJp7sVhEjyggvAFHV28NZqdZriU6Uyi0WiTV4pWjgX+X1k\n4VUvW+PJvJurwgPboYoKmabGyP0vVJDPwbpHHFuu72kY0JZ5a/sIreOo1VlyhAmo\nweuPejIbpqcrxxrRvE2jWn0i\n-----END PRIVATE KEY-----\n",
+  "client_email": "mfc-2c3ggl064mjb4gz0aa0tlsnq42@western-shuttle-355013.iam.gserviceaccount.com",
+  "client_id": "110023672337311132896",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mfc-2c3ggl064mjb4gz0aa0tlsnq42%40western-shuttle-355013.iam.gserviceaccount.com"
+}

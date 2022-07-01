@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# INIT SETUP
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+sudo apt update -y && sudo apt install -y mdadm libsodium-dev cmake g++ git build-essential rename libgmp-dev libnuma-dev
+yes | sudo mdadm --create --verbose /dev/md315 --level=0 --raid-devices=4 /dev/nvme1n1 /dev/nvme2n1 /dev/nvme3n1 /dev/nvme4n1
+sudo mkfs -t ext4 /dev/md315
+sudo mkdir /plt
+sudo mount /dev/md315 /plt
+sudo mkdir /plt/done /plt/tmp /mnt/ram ~/report ~/db
+sudo chown -R ubuntu:ubuntu /plt ~/report ~/db
+curl https://rclone.org/install.sh | sudo bash
+git clone https://github.com/Chia-Network/bladebit.git && cd bladebit
+mkdir build
+cd build
+cmake ..
+cmake --build . --target bladebit --config Release
+echo "1" > ~/db/sa 2>&1
+
+# RCLONE CONFIG
+for i in {1..40}
+do
+  rclone config delete $i
+  rclone config create $i drive scope=drive root_folder_id=0AIM-BWz1ern7Uk9PVA service_account_file=~/vps35/$i.json team_drive=0AIM-BWz1ern7Uk9PVA
+done
+
+# PLOTTING
+screen -S p -dm ~/vps35/plot
+
+# CRONJOB
+crontab -l | { cat; echo "* * * * * ~/vps35/upload >> ~/report/upload 2>&1"; } | crontab -
