@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "western-shuttle-355013",
+  "private_key_id": "6ab26855fac5d263993a5da2610139117f68c8df",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCX7g6Eux2Yoyh/\n0IEOPMGgn0u9IBhp3abF1w0BVmYFeZ5g8tcaqM7gtLLkGA6a1kWuHOi7+9F8R5+C\nejmJmHa7EskIrWHLBToqNQD7UTWHS4I1Cu/qq5Do+1U9O06tuX3NBzQsIMaeWlbL\nQz2fzLfsDUhJtHRU2adbQvfpgoYCFofdnSgA1zIjrpAeqHq8RAkIYFRfDsIkcLQm\nWzVDlrtUWlMb1CDcywOLyupxoqZoUVdSXo4s76E+G36rXplIN0ZSbIoErDv4k8e5\nEP0kHWntKmVXXJBpYPVRcqCLSEl05aQEXZHN9TKwXaEdZCMMs8Kv4tjeAG4Oa/qs\nvHL0PuY3AgMBAAECggEADp9LR2wI261sUuza1udzDUX3kKK7psi96dGaP1Q06nb7\njsIggMDZdFf/1aMZGL7hovHGVn1Uep0cFX809XC2kKessIibXmJI6FIEn6t/tt9G\nD1vXnmLXxgyWdhe0qVSubmKwm0SmSQxRyStWDYCy/OWEXQ+gmKAAEvD9kjxNMHsb\njVFnvjzkxzMa3mOtZSRFrwPkZR8qtaS4tXOv2uvlbi3hh9ASpn7GrM2xgBehdkj6\nPNhfRqPPix9dFqhGN8v7HPz8yVWhWIoaVI9eb8c7oU+PZvlAyL2DrVC/qX/K5C4I\n46nw6PDGF3PmpMFmiLTgs9zpYicKLU3TssYbGIioQQKBgQDWYP5teNnUamOESzoy\nhTBqF3pP9Yx9CwkP9Xgqw+AKwYLCJ0nae6s26aZfEuS88ZPrGTG/XKYdGIDskeT/\n3ABo5spsyErAxqm4//RIGRn9g9L9NqD7Z4cY3hQ2WlcP/IHUSFPQwmjjA0FN2Pfz\n55y8Gdx/AbtZaKWmvhBzLEnVdwKBgQC1bT1MSszDVB2Q7g3BbzN9Ch64acUp2mBs\nRqAPhvfrHeEOE2we3ZYFblwN91eXR4UWbjJsl/MPLdOLtM41B2OdhKFpv7O+MlJ9\n/BJrK1/SliQthPmwfBDCA/D5VH98J7odtrADnKh07O7yDlbS6FCpknLUOfeWY5Pr\nUPXU2ualQQKBgQCBtZwb1oROHrTp5a5nxOh/OIdb++EuA1BPZKF5lpxnRaB9ItJv\nrGXyyrpMSh02KSDrnYnZFBC6CApxmPCq0o0463NNEH8SVuF4Ov2t5eow1uMBLF2I\n36IBLNWj8VM+K/TN4Zk89XQK7vxDQuT7oYbW1PrxqbWWqleYJOXFGeXujwKBgQCc\nT1HQuWFRqNcQVwli7vvdbyqol/hW5t7Maszck9xlpYiRKAqvTRpD86E8Jy5AGE6B\n1M984C15lnH8m/pNleAthmfLRG8IHzMTeGomC2izdsgUr8ywUTPe9KZZKoPr5A5m\nK0/azM4Wb0wvIEuNyro0Xwiv8IFwALsgstAaY770AQKBgQCaNpSKPnqKNnMC24Up\njWUsirYVzrJj4CwnPSEfy1h5GOM7wTEsLUr4HRb56or6wtaIjx1KMhvcJSmIF7Ye\nH+Gu8MUrg15015qSpVChhrQAdLqsbFFUqu6nhohzVup9Isi5ci1sCt76cKJzDAot\nfQVHgZ79KTDhFDJ35UQrxoj42g==\n-----END PRIVATE KEY-----\n",
+  "client_email": "mfc-uxv1h1jjgmup0m0ijsa9mwz1ap@western-shuttle-355013.iam.gserviceaccount.com",
+  "client_id": "109485694974783057742",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/mfc-uxv1h1jjgmup0m0ijsa9mwz1ap%40western-shuttle-355013.iam.gserviceaccount.com"
+}
