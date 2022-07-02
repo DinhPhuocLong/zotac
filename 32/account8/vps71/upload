@@ -1,0 +1,36 @@
+#!/bin/bash
+
+echo "$(date '+%d/%m/%Y %H:%M:%S') - Uploader checking..."
+if [ "$(ls -1 /plt/done/*.plot 2>/dev/null | wc -l)" != "0" ]; then
+  LISTFILES=(`ls /plt/done/*.plot`)
+  readarray -d / -t PATHARR <<< "${LISTFILES[0]}"
+  FULLNAME=${PATHARR[3]/$'\n'}
+  readarray -d . -t FULLNAMEARR <<< "${FULLNAME}"
+  BASENAME=${FULLNAMEARR[0]/$'\n'}
+  BASENAME=${BASENAME//plot-k32-/}
+  mv "${LISTFILES[0]}" "/plt/done/${BASENAME}.uploading"
+  SAID=`cat ~/db/sa`
+  echo "$(date '+%d/%m/%Y %H:%M:%S') - SA$SAID: Uploading $BASENAME.cdb"
+  if [ "${SAID}" != "40" ]; then
+    echo "$((SAID+1))" > ~/db/sa 2>&1
+  else
+    echo "1" > ~/db/sa
+  fi
+  START=$(date +%s)
+  timeout 120m rclone copyto --drive-stop-on-upload-limit  --drive-chunk-size 256M "/plt/done/$BASENAME.uploading" "$SAID:$BASENAME.cdb" -q
+  END=$(date +%s)
+  DIFF=$(( $END - $START ))
+  if [ $DIFF -gt 6000 -o $DIFF -lt 600 ]; then
+    echo "$(date '+%d/%m/%Y %H:%M:%S') - SA$SAID: Error $BASENAME.cdb. Trying again..."
+    if [ $(wc -c < "/plt/done/${BASENAME}.uploading") -gt 100000000000 ]; then
+      mv "/plt/done/${BASENAME}.uploading" "/plt/done/plot-k32-${BASENAME}.plot"
+    else
+      rm -f "/plt/done/${BASENAME}.uploading"
+    fi
+  else
+    rm -f "/plt/done/${BASENAME}.uploading"
+    echo "$(date '+%d/%m/%Y %H:%M:%S') - SA$SAID: Success $BASENAME.cdb"
+  fi
+else
+  echo "$(date '+%d/%m/%Y %H:%M:%S') - Empty"
+fi

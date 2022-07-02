@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/chia-plotter/build
+./chia_plot -n 9999 -r 32 -u 256 -t /plt/ -2 /mnt/ram/ -d /plt/done/ -f a2888d87ded8642face24399835026d79597a22c9674f9a615531f15f4c6835817d5547fe80b379d6b90691e826e7363 -p 8520afca90626dcaffe08374b4741ae171525c1c2f5372a9121e43cec1ad48dad05f85403f688ef5ec7e0066ddb37e9a /plt/done >> ~/report/plot 2>&1
