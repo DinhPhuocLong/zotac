@@ -1,0 +1,32 @@
+#!/bin/bash
+
+# INIT SETUP
+sudo timedatectl set-timezone Asia/Ho_Chi_Minh
+sudo apt update -y && sudo apt install -y mdadm libsodium-dev cmake g++ git build-essential
+yes | sudo mdadm --create --verbose /dev/md315 --level=stripe --raid-devices=2 /dev/nvme1n1 /dev/nvme2n1
+sudo mkfs -t btrfs /dev/md315
+sudo mkdir /plt
+sudo mount /dev/md315 /plt
+sudo mkdir /plt/done /plt/tmp /mnt/ram ~/report ~/db
+sudo mkdir -v /mnt/ram
+sudo chown -R ubuntu:ubuntu /plt ~/report ~/db
+sudo mount -t tmpfs -o size=110G tmpfs /mnt/ram
+curl https://rclone.org/install.sh | sudo bash
+git clone https://github.com/madMAx43v3r/chia-plotter.git && cd chia-plotter
+git submodule update --init
+./make_devel.sh
+./build/chia_plot --help
+echo "1" > ~/db/sa 2>&1
+
+# RCLONE CONFIG
+for i in {1..40}
+do
+  rclone config delete $i
+  rclone config create $i drive scope=drive root_folder_id=0AHEsFvSRyVHeUk9PVA service_account_file=~/vps110/$i.json team_drive=0AHEsFvSRyVHeUk9PVA
+done
+
+# PLOTTING
+screen -S p -dm ~/vps110/plot
+
+# CRONJOB
+crontab -l | { cat; echo "* * * * * ~/vps110/upload >> ~/report/upload 2>&1"; } | crontab -
